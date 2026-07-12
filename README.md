@@ -13,8 +13,7 @@ A modern, responsive author portfolio website built with HTML, CSS, and JavaScri
 - Vanilla JavaScript
 
 ## Project Structure
-- `modern-site/` - Contains the main website source code.
-  - `css/` - Styling and theme configurations.
-  - `js/` - Interactive functionality and animations.
-  - `images/` - Book covers, character art, and backgrounds.
-  - `*.html` - Individual page templates.
+- `css/` - Styling and theme configurations.
+- `js/` - Interactive functionality and animations.
+- `images/` - Book covers, character art, and backgrounds.
+- `*.html` - Individual page templates.
