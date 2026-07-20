@@ -1,0 +1,8 @@
+title: Matthew Robert Zender
+description: Author of Real Family, Nick's Search for Purpose, and Muñeca.
+url: "https://edcorners.github.io"
+baseurl: "/zender-books" # Adjust if hosting at root or different subpath
+permalink: /:title.html
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag

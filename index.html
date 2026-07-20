@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: "Matthew Robert Zender | Author"
+description: "Matthew Robert Zender - Author Portfolio"
+body_class: "author-landing"
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Matthew Robert Zender - Author Portfolio">
-    <title>Matthew Robert Zender | Author</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="images/author/mrz-logo.png">
-</head>
-
-<body class="author-landing">
-
-    <!-- COMPONENT:NAV -->
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/author/mrz-logo.png" alt="MRZ Signature Logo" style="height: 55px; width: auto; margin: -5px 0;">
-            </a>
-            <div class="nav-toggle" id="mobile-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html#home" class="nav-links">Home</a></li>
-                <li><a href="index.html#books" class="nav-links">Books</a></li>
-                <li><a href="index.html#news" class="nav-links">News</a></li>
-                <li><a href="index.html#about" class="nav-links">About</a></li>
-                <!-- <li><a href="index.html#reviews" class="nav-links">Reviews</a></li> -->
-                <li><a href="book-clubs.html" class="nav-links">For Book Clubs</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- /COMPONENT:NAV -->
-
-    <header class="author-hero section" id="home">
+<header class="author-hero section" id="home">
         <div class="container">
             <div class="author-hero-content glass animate-up">
                 <img src="images/author/author-portrait.jpg" alt="Matthew Robert Zender"
@@ -121,20 +88,19 @@
             <div class="container">
                 <h2 class="section-title fade-in">Latest News</h2>
                 <div class="news-grid fade-in">
+                    {% for post in site.posts %}
                     <div class="news-card glass">
-                        <img src="images/marketing-kit/promo-1080x1920.jpg" alt="Book Clubs Promo" style="width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin: 0 auto 15px; display: block;">
-                        <span class="news-date">July 2026</span>
-                        <h3>Book Club Visits Available!</h3>
-                        <p>I am now officially taking bookings for virtual Q&amp;A sessions with your book club via Zoom and Google Meet. Check out the new page to download the discussion guide and marketing materials.</p>
-                        <a href="book-clubs.html" class="read-more">Book Me Now &rarr;</a>
+                        {% if post.image %}
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" style="width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin: 0 auto 15px; display: block;">
+                        {% endif %}
+                        <span class="news-date">{{ post.date | date: "%B %Y" }}</span>
+                        <h3>{{ post.title }}</h3>
+                        {{ post.content | markdownify }}
+                        {% if post.link %}
+                        <a href="{% if post.link contains 'http' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" {% if post.link_target %}target="{{ post.link_target }}"{% endif %} class="read-more">{{ post.link_text | default: "Read More &rarr;" }}</a>
+                        {% endif %}
                     </div>
-                    <div class="news-card glass">
-                        <img src="images/promos/promo-1200x1200.jpg" alt="Barnes & Noble Promo" style="width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin: 0 auto 15px; display: block;">
-                        <span class="news-date">July 2026</span>
-                        <h3>Now Available at Barnes & Noble!</h3>
-                        <p>I'm thrilled to announce that <em>Real Family</em> is officially available at Barnes & Noble. Thank you to everyone for your incredible support.</p>
-                        <a href="https://www.barnesandnoble.com/w/real-family-matthew-zender/1115333746?ean=9798199094757" target="_blank" class="read-more">Get it at B&N &rarr;</a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -188,14 +154,3 @@
         </section>
 
     </main>
-
-    <!-- COMPONENT:FOOTER -->
-    <footer>
-        <p>&copy; 2026 Matthew Robert Zender. All rights reserved.</p>
-    </footer>
-    <!-- /COMPONENT:FOOTER -->
-
-    <script src="js/main.js"></script>
-</body>
-
-</html>
