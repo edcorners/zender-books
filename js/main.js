@@ -37,14 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // 3. Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
+            const href = this.getAttribute('href');
+            if (!href.includes('#')) return;
+            
+            const targetId = href.substring(href.indexOf('#'));
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
-            if (targetElement) {
+            const path = href.split('#')[0];
+            const isCurrentPage = !path || window.location.pathname.endsWith(path) || (path === 'index.html' && window.location.pathname.endsWith('/'));
+            
+            if (targetElement && isCurrentPage) {
+                e.preventDefault();
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
