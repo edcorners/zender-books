@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Clubs - Matthew Robert Zender">
+    <title>For Book Clubs | Matthew Robert Zender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/author/mrz-logo.png">
+    <style>
+
+        .book-club-pitch {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+        }
+        .book-club-pitch h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .book-club-pitch p {
+            font-size: 1.1rem;
+            color: #D1D5DB;
+            margin-bottom: 15px;
+        }
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .material-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .material-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .material-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        .material-card h4 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .material-card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .download-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover {
+            background: var(--accent-hover);
+        }
+        .virtual-options {
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(139, 92, 246, 0.2));
+            border: 1px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+        .virtual-options h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .virtual-options p {
+            font-size: 1.1rem;
+            color: #D1D5DB;
+        }
+        .virtual-options i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin: 0 10px 20px 10px;
+        }
+    </style>
+</head>
+
+<body class="author-landing">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/author/mrz-logo.png" alt="MRZ Signature Logo" style="height: 55px; width: auto; margin: -5px 0;">
+            </a>
+            <div class="nav-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-links">Home</a></li>
+                <li><a href="index.html#books" class="nav-links">Books</a></li>
+                <li><a href="index.html#about" class="nav-links">About</a></li>
+                <li><a href="index.html#news" class="nav-links">News</a></li>
+                <li><a href="book-clubs.html" class="nav-links">For Book Clubs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 50vh; padding: 120px 0 40px 0;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-up">For Book Clubs</h1>
+            <h2 class="animate-up delay-1">Invite Matthew to your next meeting</h2>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                
+
+
+                <!-- Book Pitch -->
+                <div class="book-club-pitch fade-in">
+                    <h3>Why <em>Real Family</em> is Perfect for Your Club</h3>
+                    <p><em>Real Family</em> explores the profound personal transformation, the complex nature of human relationships, and the unexpected places we discover our true kin.</p>
+                    <p>It's a story that sparks deep conversation about loyalty, identity, cultural intersection, and what it truly means to belong. With five distinctly different characters whose paths intertwine, your book club will find endless themes to discuss, relate to, and debate.</p>
+                </div>
+
+                <!-- Virtual Options Explicitly Stated -->
+                <div class="virtual-options fade-in glass">
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Virtual Q&amp;A Sessions Available</h3>
+                    <p>I would love to join your book club! I am explicitly available for 30-to-60-minute virtual Q&amp;A sessions via <strong>Zoom</strong> or <strong>Google Meet</strong>. No matter where your club is located, it's incredibly easy to connect and dive into the world of <em>Real Family</em> together.</p>
+                </div>
+
+                <!-- Hosted Materials -->
+                <h3 class="section-title fade-in" style="font-size: 2rem; margin-bottom: 40px;">Downloadable Materials</h3>
+                <div class="materials-grid fade-in">
+                    <div class="material-card">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <h4>Discussion Guide</h4>
+                        <p>A printable PDF filled with thought-provoking questions designed to guide your club's conversation.</p>
+                        <a href="docs/🍷 Book Club Discussion Guide.docx.pdf" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                    <div class="material-card">
+                        <i class="fa-solid fa-image"></i>
+                        <h4>Marketing Materials</h4>
+                        <p>High-impact graphics and social media kits you can use to promote your upcoming meeting.</p>
+                        <a href="docs/Marketing-Kit.html" class="download-btn" target="_blank">View Marketing Kit</a>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-wrapper glass fade-in" style="margin-top: 60px;">
+                    <h3 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #fff;">Book Me for Your Meeting</h3>
+                    <p style="text-align: center; color: #D1D5DB; margin-bottom: 30px; font-size: 1.1rem;">I would love to connect with your group! Please send me an email or direct message with the following details:</p>
+                    
+                    <div style="background: rgba(0, 0, 0, 0.2); padding: 25px; border-radius: 12px; margin-bottom: 30px; color: #fff; font-family: monospace; font-size: 1.05rem;">
+                        <strong>Your Name / Club Organizer:</strong> [Jane Doe]<br><br>
+                        <strong>Book Club Name & Location:</strong> [e.g. Austin Readers (Virtual)]<br><br>
+                        <strong>Proposed Date / Time:</strong> [e.g. October 15th at 7 PM EST]<br><br>
+                        <strong>Message / Questions:</strong> [Tell me a bit about your group!]
+                    </div>
+
+                    <div style="text-align: center; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                        <a href="mailto:realfamilyseries@gmail.com" class="submit-btn" style="text-decoration: none; width: auto; min-width: 250px; display: inline-flex; justify-content: center; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-envelope"></i> Email Me
+                        </a>
+                        <a href="https://www.instagram.com/zenderbooks/" target="_blank" class="submit-btn" style="text-decoration: none; width: auto; min-width: 250px; background: #E1306C; display: inline-flex; justify-content: center; align-items: center; gap: 10px;">
+                            <i class="fa-brands fa-instagram"></i> DM on Instagram
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Matthew Robert Zender. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

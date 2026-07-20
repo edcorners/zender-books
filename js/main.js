@@ -86,4 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 6. Prevent right-click on images
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+
 });
