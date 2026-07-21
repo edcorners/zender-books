@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="container" style="padding-top: 100px; padding-bottom: 50px; max-width: 800px; margin: 0 auto;">
+    <h1 style="margin-bottom: 10px;">{{ page.title }}</h1>
+    <p class="news-date" style="margin-bottom: 30px; font-style: italic;">{{ page.date | date: "%B %d, %Y" }}</p>
+    
+    {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" style="max-width: 100%; border-radius: 8px; margin-bottom: 30px; display: block;">
+    {% endif %}
+    
+    <div class="post-content" style="font-size: 1.1em; line-height: 1.6;">
+        {{ content }}
+    </div>
+    
+    {% if page.link %}
+    <div style="margin-top: 40px;">
+        <a href="{% if page.link contains 'http' %}{{ page.link }}{% else %}{{ page.link | relative_url }}{% endif %}" {% if page.link_target %}target="{{ page.link_target }}"{% endif %} class="submit-btn" style="text-decoration: none; display: inline-block;">{{ page.link_text | default: "Read More &rarr;" }}</a>
+    </div>
+    {% endif %}
+    
+    <div style="margin-top: 50px;">
+        <a href="{{ '/index.html#news' | relative_url }}" class="read-more">&larr; Back to News</a>
+    </div>
+</div>
