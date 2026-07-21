@@ -4,5 +4,24 @@ url: "https://www.zenderbooks.com"
 baseurl: "" # Empty for root, change if hosting in a subfolder locally
 permalink: /:title.html
 markdown: kramdown
+
+collections:
+  books:
+    output: true
+    permalink: /:collection/:name.html
+
+author:
+  name: "Matthew Robert Zender"
+  email: "realfamilyseries@gmail.com"
+  twitter: "zenderbooks"
+
+social:
+  name: "Matthew Robert Zender"
+  links:
+    - https://www.instagram.com/zenderbooks/
+    - https://www.amazon.com/stores/Matthew-Zender/author/B0H4P4R1J5
+    - https://matthewzender.substack.com
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
