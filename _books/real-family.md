@@ -48,13 +48,8 @@ characters:
     name: "Anna Maria Kiniski"
     born: "Oct 30, 1971"
     description: "Anna Maria Kiniski was born on October 30, 1971. Anna Kiniski is one of the emotional anchors of Real Family. Her journey is a powerful testament to resilience, tracing her evolution from a deeply traumatized, hyper-vigilant young girl into a fiercely confident, independent supermodel. Defined by her quiet strength, Anna’s arc captures the profound impact of the chosen family and the painful, beautiful process of healing. She is characterized by rich, black, shoulder-length hair that frames a distinctly pale complexion. This stark contrast gives her a classic, timeless look that easily catches the camera's eye. Her green eyes are her most captivating feature, frequently described as stunning. In her youth, they likely conveyed the hyper-vigilance and quiet observation of a girl trying to remain unseen. As she matures, those same eyes become a powerful tool in her modeling career, projecting a deep, soulful intensity and authentic emotion."
----
 
-<section id="creators" class="section">
-    <div class="container creators-grid" style="display: flex; justify-content: center;">
-        <div class="creator-card fade-in">
-            <h3>About the Artist</h3>
-            <p><strong>Ember Koel</strong></p>
-        </div>
-    </div>
-</section>
+creators:
+  - title: "About the Artist"
+    name: "Ember Koel"
+---

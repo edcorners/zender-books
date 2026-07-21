@@ -84,5 +84,18 @@ layout: default
     </section>
     {% endif %}
 
+    {% if page.creators %}
+    <section id="creators" class="section">
+        <div class="container creators-grid" style="display: flex; justify-content: center;">
+            {% for creator in page.creators %}
+            <div class="creator-card fade-in">
+                <h3>{{ creator.title }}</h3>
+                <p><strong>{{ creator.name }}</strong></p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
     {{ content }}
 </main>
