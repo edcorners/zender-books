@@ -11,9 +11,13 @@ A modern, responsive author portfolio website built with HTML, CSS, and JavaScri
 - HTML5
 - CSS3 (Vanilla, custom properties, Flexbox/Grid)
 - Vanilla JavaScript
+- Jekyll (Static Site Generator)
+
 
 ## Project Structure
 - `css/` - Styling and theme configurations.
 - `js/` - Interactive functionality and animations.
 - `images/` - Book covers, character art, and backgrounds.
+- `_layouts/` and `_includes/` - Jekyll components.
+- `_posts/` - Markdown files for the Latest News section.
 - `*.html` - Individual page templates.

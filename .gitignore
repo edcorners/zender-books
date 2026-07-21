@@ -1,2 +1,5 @@
 venv/
 watermark.py
+local_setup.md
+vendor/
+.bundle/

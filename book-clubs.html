@@ -4,6 +4,94 @@ title: "For Book Clubs | Matthew Robert Zender"
 description: "Book Clubs - Matthew Robert Zender"
 body_class: "author-landing"
 ---
+<style>
+    .book-club-pitch {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 50px auto;
+    }
+    .book-club-pitch h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    .book-club-pitch p {
+        font-size: 1.1rem;
+        color: #D1D5DB;
+        margin-bottom: 15px;
+    }
+    .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    .material-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        padding: 30px;
+        border-radius: 16px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .material-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .material-card i {
+        font-size: 3rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+    }
+    .material-card h4 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    .material-card p {
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+    .download-btn {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+        background: var(--accent-hover);
+    }
+    .virtual-options {
+        background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(139, 92, 246, 0.2));
+        border: 1px solid var(--accent);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px auto;
+    }
+    .virtual-options h3 {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    .virtual-options p {
+        font-size: 1.1rem;
+        color: #D1D5DB;
+    }
+    .virtual-options i {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin: 0 10px 20px 10px;
+    }
+</style>
 
 <header class="hero" style="min-height: 50vh; padding: 120px 0 40px 0;">
         <div class="hero-overlay"></div>
