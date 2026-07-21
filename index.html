@@ -42,42 +42,19 @@ body_class: "author-landing"
                 <h2 class="section-title fade-in">Books by Matthew Zender</h2>
                 <div class="books-grid">
 
-                    <!-- Real Family -->
-                    <a href="real-family.html" class="book-card fade-in">
+                    {% assign sorted_books = site.books | sort: "weight" %}
+                    {% for book in sorted_books %}
+                    <a href="{{ book.url | relative_url }}" class="book-card fade-in {% if forloop.index0 > 0 %}delay-{{ forloop.index0 }}{% endif %}">
                         <div class="book-cover has-image">
-                            <img src="images/covers/real-family-cover-characters.png" alt="Real Family Book Cover">
+                            <img src="{{ book.cover_image | relative_url }}" alt="{{ book.title }} Book Cover">
                         </div>
                         <div class="book-info">
-                            <h3>Real Family</h3>
-                            <p class="subtitle">A Journey of 5 Friends Discovering Their Identities and the True Meaning
-                                of Family</p>
+                            <h3>{{ book.title }}{% if book.title_small %} <small style="font-size: 0.7em; font-weight: normal; -webkit-text-fill-color: rgba(255, 255, 255, 0.7);">{{ book.title_small }}</small>{% endif %}</h3>
+                            <p class="subtitle">{{ book.subtitle }}</p>
                             <span class="read-more">View Details &rarr;</span>
                         </div>
                     </a>
-
-                    <!-- Nick's Search -->
-                    <a href="nick-search.html" class="book-card fade-in delay-1">
-                        <div class="book-cover has-image">
-                            <img src="images/covers/nick-search-cover-square.jpg" alt="Nick's Search for Purpose Book Cover">
-                        </div>
-                        <div class="book-info">
-                            <h3>Real Family: Nick's Search for Purpose</h3>
-                            <p class="subtitle">A Young Man's Journey to Find His Purpose in Life and Love</p>
-                            <span class="read-more">View Details &rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Muneca -->
-                    <a href="muneca.html" class="book-card fade-in delay-2">
-                        <div class="book-cover has-image">
-                            <img src="images/covers/muneca-cover-square.jpg" alt="Muñeca Book Cover">
-                        </div>
-                        <div class="book-info">
-                            <h3>Muñeca <small style="font-size: 0.7em; font-weight: normal; -webkit-text-fill-color: rgba(255, 255, 255, 0.7);">(moo – nyecka)</small></h3>
-                            <p class="subtitle">Five Lives. One Doll. An Unforgettable Legacy of Love Spanning Generations.</p>
-                            <span class="read-more">View Details &rarr;</span>
-                        </div>
-                    </a>
+                    {% endfor %}
 
                 </div>
             </div>
