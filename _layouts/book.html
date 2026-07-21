@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <a href="{{ '/index.html' | relative_url }}" class="back-link animate-up">&larr; Back to Author Page</a>
+        
+        <h1 class="animate-up">{{ page.title }}{% if page.title_small %} <br><small style="font-size: 0.6em; font-weight: normal; -webkit-text-fill-color: rgba(255, 255, 255, 0.7);">{{ page.title_small }}</small>{% endif %}</h1>
+        
+        {% if page.subtitle %}
+        <h2 class="animate-up delay-1">{{ page.subtitle }}</h2>
+        {% endif %}
+        
+        <div class="summary-card glass animate-up delay-2">
+            <div class="synopsis-content collapsed">
+                {{ page.synopsis | markdownify }}
+            </div>
+            <button class="toggle-btn">Read More <i class="fa-solid fa-chevron-down"></i></button>
+            
+            <div class="purchase-links">
+                {% if page.amazon_paperback %}
+                <a href="{{ page.amazon_paperback }}" target="_blank" class="icon-link" title="Amazon Paperback">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Paperback</span>
+                </a>
+                {% endif %}
+                {% if page.amazon_hardback %}
+                <a href="{{ page.amazon_hardback }}" target="_blank" class="icon-link" title="Amazon Hardback">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Hardback</span>
+                </a>
+                {% endif %}
+                {% if page.amazon_kindle %}
+                <a href="{{ page.amazon_kindle }}" target="_blank" class="icon-link" title="Amazon Kindle">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Kindle</span>
+                </a>
+                {% endif %}
+                {% if page.bn_link %}
+                <a href="{{ page.bn_link }}" target="_blank" class="icon-link bn-link" title="Barnes & Noble">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>B&amp;N</span>
+                </a>
+                {% endif %}
+            </div>
+            
+            {% if page.faqs_link %}
+            <div class="faq-link" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <a href="{{ page.faqs_link | relative_url }}" target="_blank" style="color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s ease;">
+                    <i class="fa-solid fa-circle-question"></i> Read the FAQs
+                </a>
+                <p style="color: #9CA3AF; font-size: 0.9rem; margin-top: 8px; font-style: italic;">Spoiler warning - reading the novel first will not spoil the drama or plots.</p>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if content contains '<section' %}
+        <a href="#characters" class="scroll-down">Explore the Characters &darr;</a>
+        {% endif %}
+    </div>
+</header>
+
+<main>
+    {% if page.characters %}
+    <section id="characters" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Meet the Characters</h2>
+            <div class="characters-grid">
+                {% for char in page.characters %}
+                <div class="character-card char-{{ char.id }} fade-in" style="--char-color: {{ char.color }};">
+                    <div class="card-image">
+                        <img src="{{ char.image | relative_url }}" alt="{{ char.name }}">
+                    </div>
+                    <div class="card-content">
+                        <h3>{{ char.name }}</h3>
+                        <p class="born">Born: {{ char.born }}</p>
+                        <p>{{ char.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {{ content }}
+</main>
