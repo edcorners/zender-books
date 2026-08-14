@@ -5,7 +5,7 @@ title_small: "(moo – nyecka)"
 subtitle: "Five Lives. One Doll. An Unforgettable Legacy of Love Spanning Generations."
 body_class: "book-subpage muneca-bg"
 cover_image: "images/covers/muneca-cover-square.jpg"
-weight: 3
+weight: 4
 amazon_paperback: "https://www.amazon.com/dp/B0H6JD45ZR"
 amazon_hardback: "https://www.amazon.com/Mu%C3%B1eca-nyecka-Matthew-R-Zender/dp/B0H6JCZLTY/ref=tmm_hrd_swatch_0"
 synopsis: >

@@ -46,12 +46,17 @@ body {
     background-blend-mode: normal;
 }
 
+.eileen-search-bg {
+    background-image: url('../images/backgrounds/eileen-bg.png');
+    background-blend-mode: normal;
+}
+
 .muneca-bg {
     background-image: url('../images/backgrounds/muneca-bg.png');
     background-blend-mode: normal;
 }
 
-.nick-search-bg .hero, .muneca-bg .hero {
+.nick-search-bg .hero, .eileen-search-bg .hero, .muneca-bg .hero {
     background: transparent;
 }
 
