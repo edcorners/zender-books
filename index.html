@@ -37,6 +37,28 @@ body_class: "author-landing"
     </header>
 
     <main>
+        <!-- Latest News Section -->
+        <section class="section" id="news">
+            <div class="container">
+                <h2 class="section-title fade-in">Latest News</h2>
+                <div class="news-grid fade-in">
+                    {% for post in site.posts %}
+                    <div class="news-card glass">
+                        {% if post.image %}
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" style="width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin: 0 auto 15px; display: block;">
+                        {% endif %}
+                        <span class="news-date">{{ post.date | date: "%B %Y" }}</span>
+                        <h3>{{ post.title }}</h3>
+                        {{ post.content | markdownify }}
+                        {% if post.link %}
+                        <a href="{% if post.link contains 'http' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" {% if post.link_target %}target="{{ post.link_target }}"{% endif %} class="read-more">{{ post.link_text | default: "Read More &rarr;" }}</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="books">
             <div class="container">
                 <h2 class="section-title fade-in">Books by Matthew Zender</h2>
@@ -56,28 +78,6 @@ body_class: "author-landing"
                     </a>
                     {% endfor %}
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Latest News Section -->
-        <section class="section" id="news">
-            <div class="container">
-                <h2 class="section-title fade-in">Latest News</h2>
-                <div class="news-grid fade-in">
-                    {% for post in site.posts %}
-                    <div class="news-card glass">
-                        {% if post.image %}
-                        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" style="width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin: 0 auto 15px; display: block;">
-                        {% endif %}
-                        <span class="news-date">{{ post.date | date: "%B %Y" }}</span>
-                        <h3>{{ post.title }}</h3>
-                        {{ post.content | markdownify }}
-                        {% if post.link %}
-                        <a href="{% if post.link contains 'http' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" {% if post.link_target %}target="{{ post.link_target }}"{% endif %} class="read-more">{{ post.link_text | default: "Read More &rarr;" }}</a>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
         </section>
